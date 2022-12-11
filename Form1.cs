@@ -15,7 +15,7 @@ namespace BillingDasboard
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             teaCount++;
             teasum = teaCount * 10;
@@ -34,7 +34,7 @@ namespace BillingDasboard
 
         }
 
-        private void elaichi_Click(object sender, EventArgs e)
+        public void elaichi_Click(object sender, EventArgs e)
         {
             elaichiCount++;
             elaichisum = elaichiCount * 15;
@@ -45,7 +45,7 @@ namespace BillingDasboard
             listItem.Items.Add(listViewItem);
         }
 
-        private void maggie_Click(object sender, EventArgs e)
+        public void maggie_Click(object sender, EventArgs e)
         {
             maggieCount++;
             maggiesum = maggieCount * 20;
@@ -56,7 +56,7 @@ namespace BillingDasboard
             listItem.Items.Add(listViewItem);
         }
 
-        private void coffee_Click(object sender, EventArgs e)
+        public void coffee_Click(object sender, EventArgs e)
         {
             coffeeCount++;
             coffeesum = maggieCount * 12;
@@ -65,6 +65,23 @@ namespace BillingDasboard
             string[] row = { coffee.Text, coffeeCount.ToString(), coffeesum.ToString() };
             var listViewItem = new ListViewItem(row);
             listItem.Items.Add(listViewItem);
+        }
+
+        private void totalAmount_TextChanged(object sender, EventArgs e)
+        {
+            int totalsum = this.coffeesum + this.teasum + this.maggiesum + this.elaichisum;
+            string sum=totalsum.ToString();
+            totalAmount1.Text=sum;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

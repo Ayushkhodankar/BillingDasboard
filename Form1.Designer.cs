@@ -38,8 +38,9 @@
             this.quantity = new System.Windows.Forms.ColumnHeader();
             this.amount = new System.Windows.Forms.ColumnHeader();
             this.total = new System.Windows.Forms.Label();
-            this.totalAmount = new System.Windows.Forms.TextBox();
+            this.totalAmount1 = new System.Windows.Forms.TextBox();
             this.print = new System.Windows.Forms.Button();
+            this.totalAmount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -132,12 +133,13 @@
             this.total.TabIndex = 6;
             this.total.Text = "Total";
             // 
-            // totalAmount
+            // totalAmount1
             // 
-            this.totalAmount.Location = new System.Drawing.Point(495, 324);
-            this.totalAmount.Name = "totalAmount";
-            this.totalAmount.Size = new System.Drawing.Size(148, 27);
-            this.totalAmount.TabIndex = 7;
+            this.totalAmount1.Location = new System.Drawing.Point(495, 324);
+            this.totalAmount1.Name = "totalAmount1";
+            this.totalAmount1.Size = new System.Drawing.Size(148, 27);
+            this.totalAmount1.TabIndex = 7;
+            this.totalAmount1.TextChanged += new System.EventHandler(this.totalAmount_TextChanged);
             // 
             // print
             // 
@@ -148,13 +150,23 @@
             this.print.Text = "Print Bill";
             this.print.UseVisualStyleBackColor = true;
             // 
+            // totalAmount
+            // 
+            this.totalAmount.AutoSize = true;
+            this.totalAmount.Location = new System.Drawing.Point(525, 354);
+            this.totalAmount.Name = "totalAmount";
+            this.totalAmount.Size = new System.Drawing.Size(0, 20);
+            this.totalAmount.TabIndex = 9;
+            this.totalAmount.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 435);
-            this.Controls.Add(this.print);
             this.Controls.Add(this.totalAmount);
+            this.Controls.Add(this.print);
+            this.Controls.Add(this.totalAmount1);
             this.Controls.Add(this.total);
             this.Controls.Add(this.listItem);
             this.Controls.Add(this.coffee);
@@ -164,6 +176,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Bill";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +194,8 @@
         private ColumnHeader quantity;
         private ColumnHeader amount;
         private Label total;
-        private TextBox totalAmount;
+        private TextBox totalAmount1;
         private Button print;
+        private Label totalAmount;
     }
 }

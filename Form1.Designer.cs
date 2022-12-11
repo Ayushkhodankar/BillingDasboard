@@ -71,6 +71,7 @@
             this.elaichi.TabIndex = 2;
             this.elaichi.Text = "Elaichi Tea";
             this.elaichi.UseVisualStyleBackColor = true;
+            this.elaichi.Click += new System.EventHandler(this.elaichi_Click);
             // 
             // maggie
             // 
@@ -80,6 +81,7 @@
             this.maggie.TabIndex = 3;
             this.maggie.Text = "Maggie";
             this.maggie.UseVisualStyleBackColor = true;
+            this.maggie.Click += new System.EventHandler(this.maggie_Click);
             // 
             // coffee
             // 
@@ -89,6 +91,7 @@
             this.coffee.TabIndex = 4;
             this.coffee.Text = "Coffee";
             this.coffee.UseVisualStyleBackColor = true;
+            this.coffee.Click += new System.EventHandler(this.coffee_Click);
             // 
             // listItem
             // 
@@ -102,6 +105,7 @@
             this.listItem.TabIndex = 5;
             this.listItem.UseCompatibleStateImageBehavior = false;
             this.listItem.View = System.Windows.Forms.View.Details;
+            this.listItem.SelectedIndexChanged += new System.EventHandler(this.listItem_SelectedIndexChanged);
             // 
             // Iname
             // 

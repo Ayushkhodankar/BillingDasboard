@@ -10,6 +10,7 @@ namespace BillingDasboard
         int maggiesum = 0;
         int coffeeCount = 0;
         int coffeesum = 0;
+        string sum=null;
         public Form1()
         {
             InitializeComponent();
@@ -59,7 +60,7 @@ namespace BillingDasboard
         public void coffee_Click(object sender, EventArgs e)
         {
             coffeeCount++;
-            coffeesum = maggieCount * 12;
+            coffeesum = coffeeCount * 12;
 
 
             string[] row = { coffee.Text, coffeeCount.ToString(), coffeesum.ToString() };
@@ -70,18 +71,18 @@ namespace BillingDasboard
         private void totalAmount_TextChanged(object sender, EventArgs e)
         {
             int totalsum = this.coffeesum + this.teasum + this.maggiesum + this.elaichisum;
-            string sum=totalsum.ToString();
+            sum=totalsum.ToString();
             totalAmount1.Text=sum;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void print_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Total Bill= Rs."+this.sum+"\nYour Bill Is Printed Successfully!");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

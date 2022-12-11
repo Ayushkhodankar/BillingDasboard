@@ -40,7 +40,6 @@
             this.total = new System.Windows.Forms.Label();
             this.totalAmount1 = new System.Windows.Forms.TextBox();
             this.print = new System.Windows.Forms.Button();
-            this.totalAmount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -149,22 +148,13 @@
             this.print.TabIndex = 8;
             this.print.Text = "Print Bill";
             this.print.UseVisualStyleBackColor = true;
-            // 
-            // totalAmount
-            // 
-            this.totalAmount.AutoSize = true;
-            this.totalAmount.Location = new System.Drawing.Point(525, 354);
-            this.totalAmount.Name = "totalAmount";
-            this.totalAmount.Size = new System.Drawing.Size(0, 20);
-            this.totalAmount.TabIndex = 9;
-            this.totalAmount.Click += new System.EventHandler(this.label2_Click);
+            this.print.Click += new System.EventHandler(this.print_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 435);
-            this.Controls.Add(this.totalAmount);
             this.Controls.Add(this.print);
             this.Controls.Add(this.totalAmount1);
             this.Controls.Add(this.total);
@@ -196,6 +186,5 @@
         private Label total;
         private TextBox totalAmount1;
         private Button print;
-        private Label totalAmount;
     }
 }

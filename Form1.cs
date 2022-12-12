@@ -11,7 +11,8 @@ namespace BillingDasboard
         int coffeeCount = 0;
         int coffeesum = 0;
         string sum=null;
-        int totalsumm=0;    
+
+        int totalsum=0;    
         public Form1()
         {
             InitializeComponent();

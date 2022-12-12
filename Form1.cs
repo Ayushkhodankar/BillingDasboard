@@ -1,3 +1,5 @@
+using static System.Net.Mime.MediaTypeNames;
+
 namespace BillingDasboard
 {
     public partial class Form1 : Form
@@ -22,11 +24,17 @@ namespace BillingDasboard
         {
             teaCount++;
             teasum = teaCount * 10;
+            var text = tea.Text;
             
-
             string[] row = { tea.Text, teaCount.ToString(), teasum.ToString()};
+            listItem.Items.RemoveAt(teaCount);
             var listViewItem = new ListViewItem(row);
-            listItem.Items.Add(listViewItem);
+            if (!listItem.Items.ContainsKey(text))
+            {
+                listItem.Items.Add(listViewItem); 
+                
+            }
+            
         }
 
         private void listItem_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,10 +50,15 @@ namespace BillingDasboard
             elaichiCount++;
             elaichisum = elaichiCount * 15;
 
-
+            
             string[] row = { elaichi.Text, elaichiCount.ToString(), elaichisum.ToString() };
             var listViewItem = new ListViewItem(row);
-            listItem.Items.Add(listViewItem);
+            
+            if (!listItem.Items.Contains(listViewItem))
+            {
+                listItem.Items.Clear();
+                listItem.Items.Add(listViewItem);
+            }
         }
 
         public void maggie_Click(object sender, EventArgs e)
@@ -53,7 +66,7 @@ namespace BillingDasboard
             maggieCount++;
             maggiesum = maggieCount * 20;
 
-
+            listItem.Items.Clear();
             string[] row = { maggie.Text, maggieCount.ToString(), maggiesum.ToString() };
             var listViewItem = new ListViewItem(row);
             listItem.Items.Add(listViewItem);
@@ -64,7 +77,7 @@ namespace BillingDasboard
             int ccount=coffeeCount++;
             coffeesum = coffeeCount * 12;
 
-
+            listItem.Items.Clear();
 
             string[] row = { coffee.Text, coffeeCount.ToString(), coffeesum.ToString() };
             var listViewItem = new ListViewItem(row);

@@ -64,23 +64,22 @@ namespace BillingDasboard
             int ccount=coffeeCount++;
             coffeesum = coffeeCount * 12;
 
+
+
             string[] row = { coffee.Text, coffeeCount.ToString(), coffeesum.ToString() };
             var listViewItem = new ListViewItem(row);
-
-            // listItem.Items.Remove(listViewItem);
-            if (ccount > 0)
-            {
-               // listItem.Items.Add(listViewItem);
-                listItem.SelectedItems.Clear();
-            }
+           listItem.Items.Add(listViewItem);
+            
+          //  listItem.Items[maggie.Text].Remove();
            
+            //  listItem.Items.Remove(listViewItem);
         }
 
         private void totalAmount_TextChanged(object sender, EventArgs e)
         {
             int totalsum = this.coffeesum + this.teasum + this.maggiesum + this.elaichisum;
             sum=totalsum.ToString();
-            totalAmount1.Text=sum;
+            totalAmount.Text=sum;
         }
 
         private void print_Click(object sender, EventArgs e)
@@ -91,6 +90,12 @@ namespace BillingDasboard
         private void Form1_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            listItem.Clear();
+            
         }
     }
 }

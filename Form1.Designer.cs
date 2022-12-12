@@ -38,8 +38,9 @@
             this.quantity = new System.Windows.Forms.ColumnHeader();
             this.amount = new System.Windows.Forms.ColumnHeader();
             this.total = new System.Windows.Forms.Label();
-            this.totalAmount1 = new System.Windows.Forms.TextBox();
+            this.totalAmount = new System.Windows.Forms.TextBox();
             this.print = new System.Windows.Forms.Button();
+            this.reset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -132,13 +133,13 @@
             this.total.TabIndex = 6;
             this.total.Text = "Total";
             // 
-            // totalAmount1
+            // totalAmount
             // 
-            this.totalAmount1.Location = new System.Drawing.Point(495, 324);
-            this.totalAmount1.Name = "totalAmount1";
-            this.totalAmount1.Size = new System.Drawing.Size(148, 27);
-            this.totalAmount1.TabIndex = 7;
-            this.totalAmount1.TextChanged += new System.EventHandler(this.totalAmount_TextChanged);
+            this.totalAmount.Location = new System.Drawing.Point(495, 324);
+            this.totalAmount.Name = "totalAmount";
+            this.totalAmount.Size = new System.Drawing.Size(148, 27);
+            this.totalAmount.TabIndex = 7;
+            this.totalAmount.TextChanged += new System.EventHandler(this.totalAmount_TextChanged);
             // 
             // print
             // 
@@ -150,13 +151,24 @@
             this.print.UseVisualStyleBackColor = true;
             this.print.Click += new System.EventHandler(this.print_Click);
             // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(64, 322);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(100, 29);
+            this.reset.TabIndex = 9;
+            this.reset.Text = "Reset";
+            this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 435);
+            this.Controls.Add(this.reset);
             this.Controls.Add(this.print);
-            this.Controls.Add(this.totalAmount1);
+            this.Controls.Add(this.totalAmount);
             this.Controls.Add(this.total);
             this.Controls.Add(this.listItem);
             this.Controls.Add(this.coffee);
@@ -184,7 +196,8 @@
         private ColumnHeader quantity;
         private ColumnHeader amount;
         private Label total;
-        private TextBox totalAmount1;
+        private TextBox totalAmount;
         private Button print;
+        private Button reset;
     }
 }

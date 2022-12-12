@@ -67,7 +67,7 @@ namespace BillingDasboard
             string[] row = { coffee.Text, coffeeCount.ToString(), coffeesum.ToString() };
             var listViewItem = new ListViewItem(row);
             
-                listItem.Items.Remove(Index.FromStart);
+                listItem.Items.Remove(listViewItem);
                 listItem.Items.Add(listViewItem);
         
         }

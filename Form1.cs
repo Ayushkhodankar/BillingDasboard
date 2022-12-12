@@ -61,13 +61,15 @@ namespace BillingDasboard
 
         public void coffee_Click(object sender, EventArgs e)
         {
-            coffeeCount++;
+            int ccount=coffeeCount++;
             coffeesum = coffeeCount * 12;
-
 
             string[] row = { coffee.Text, coffeeCount.ToString(), coffeesum.ToString() };
             var listViewItem = new ListViewItem(row);
-            listItem.Items.Add(listViewItem);
+            
+                listItem.Items.Remove(Index.FromStart);
+                listItem.Items.Add(listViewItem);
+        
         }
 
         private void totalAmount_TextChanged(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace BillingDasboard
         public void button1_Click(object sender, EventArgs e)
         {
             teaCount++;
-           // teasum = teaCount * 10;
+            teasum = teaCount * 10;
            // int text = integ tea.Text;
             
             string[] row = { tea.Text, teaCount.ToString(), teasum.ToString()};

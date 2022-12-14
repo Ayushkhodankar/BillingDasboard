@@ -23,17 +23,17 @@ namespace BillingDasboard
         public void button1_Click(object sender, EventArgs e)
         {
             teaCount++;
-            teasum = teaCount * 10;
-            var text = tea.Text;
+           // teasum = teaCount * 10;
+           // int text = integ tea.Text;
             
             string[] row = { tea.Text, teaCount.ToString(), teasum.ToString()};
-            listItem.Items.RemoveAt(teaCount);
-            var listViewItem = new ListViewItem(row);
-            if (!listItem.Items.ContainsKey(text))
-            {
+           // listItem.Items.Remove(text);
+          var listViewItem = new ListViewItem(row);
+          /*  if (!listItem.Items.ContainsKey(text))
+            {*/
                 listItem.Items.Add(listViewItem); 
                 
-            }
+           // }
             
         }
 

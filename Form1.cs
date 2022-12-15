@@ -24,16 +24,13 @@ namespace BillingDasboard
         {
             teaCount++;
             teasum = teaCount * 10;
-           // int text = integ tea.Text;
+          
             
             string[] row = { tea.Text, teaCount.ToString(), teasum.ToString()};
-           // listItem.Items.Remove(text);
-          var listViewItem = new ListViewItem(row);
-          /*  if (!listItem.Items.ContainsKey(text))
-            {*/
-                listItem.Items.Add(listViewItem); 
+            var listViewItem = new ListViewItem(row);
+            listItem.Items.Add(listViewItem); 
                 
-           // }
+            
             
         }
 

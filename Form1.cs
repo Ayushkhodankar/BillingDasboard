@@ -82,7 +82,7 @@ namespace BillingDasboard
             
           //  listItem.Items[maggie.Text].Remove();
            
-            //  listItem.Items.Remove(listViewItem);
+           //  listItem.Items.Remove(listViewItem);
         }
 
         private void totalAmount_TextChanged(object sender, EventArgs e)

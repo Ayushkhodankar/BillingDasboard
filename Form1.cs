@@ -53,7 +53,7 @@ namespace BillingDasboard
             
             if (!listItem.Items.Contains(listViewItem))
             {
-                listItem.Items.Clear();
+               // listItem.Items.Clear();
                 listItem.Items.Add(listViewItem);
             }
         }
@@ -63,7 +63,7 @@ namespace BillingDasboard
             maggieCount++;
             maggiesum = maggieCount * 20;
 
-            listItem.Items.Clear();
+           // listItem.Items.Clear();
             string[] row = { maggie.Text, maggieCount.ToString(), maggiesum.ToString() };
             var listViewItem = new ListViewItem(row);
             listItem.Items.Add(listViewItem);
@@ -74,7 +74,7 @@ namespace BillingDasboard
             int ccount=coffeeCount++;
             coffeesum = coffeeCount * 12;
 
-            listItem.Items.Clear();
+           // listItem.Items.Clear();
 
             string[] row = { coffee.Text, coffeeCount.ToString(), coffeesum.ToString() };
             var listViewItem = new ListViewItem(row);
@@ -98,8 +98,7 @@ namespace BillingDasboard
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-           
+        {  
         }
 
         private void reset_Click(object sender, EventArgs e)

@@ -81,7 +81,7 @@ namespace BillingDasboard
            listItem.Items.Add(listViewItem);
             
           //  listItem.Items[maggie.Text].Remove();
-           
+         
            //  listItem.Items.Remove(listViewItem);
         }
 

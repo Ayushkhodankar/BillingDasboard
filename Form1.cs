@@ -12,7 +12,7 @@ namespace BillingDasboard
         int maggiesum = 0;
         int coffeeCount = 0;
         int coffeesum = 0;
-        string sum=null;
+        string sum="";
 
         int totalsum=0;    
         public Form1()
@@ -104,6 +104,7 @@ namespace BillingDasboard
         private void reset_Click(object sender, EventArgs e)
         {
             listItem.Clear();
+
             
         }
     }

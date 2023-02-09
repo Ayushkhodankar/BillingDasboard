@@ -93,6 +93,7 @@ namespace BillingDasboard
 
         private void print_Click(object sender, EventArgs e)
         {
+           
             MessageBox.Show("Total Bill= Rs."+this.sum+"\nYour Bill Is Printed Successfully!");
         }
 

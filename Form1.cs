@@ -30,9 +30,7 @@ namespace BillingDasboard
             string[] row = { tea.Text, teaCount.ToString(), teasum.ToString()};
             var listViewItem = new ListViewItem(row);
             listItem.Items.Add(listViewItem); 
-                
-            
-            
+          
         }
 
         private void listItem_SelectedIndexChanged(object sender, EventArgs e)
